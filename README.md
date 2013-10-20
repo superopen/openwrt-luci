@@ -1,4 +1,4 @@
 openwrt-luci
 ============
 
-openwrt luci based on luci-0.11
+clone git://nbd.name.git/luci.git
