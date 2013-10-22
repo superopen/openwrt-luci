@@ -481,7 +481,7 @@ define sgi
 endef
 
 $(eval $(call sgi,cgi,CGI Gateway behind existing Webserver))
-$(eval $(call sgi,lighttpd,Binding for the lighttpd server,+lighttpd +lighttpd-mod-cgi))
+$(eval $(call sgi,uhttpd,Binding for the uHTTPd server,+uhttpd +uhttpd-mod-lua))
 
 
 ### Themes ###
@@ -587,7 +587,7 @@ endef
 $(eval $(call collection,,\
 	Standard OpenWrt set including full admin with ppp support and the \
 	default OpenWrt theme,\
-	+lighttpd +luci-mod-admin-full +luci-theme-bootstrap \
+	+uhttpd +uhttpd-mode-ubus +luci-mod-admin-full +luci-theme-bootstrap \
 	+luci-app-firewall +luci-proto-core +luci-proto-ppp +libiwinfo-lua))
 
 $(eval $(call collection,ssl,\
@@ -596,7 +596,7 @@ $(eval $(call collection,ssl,\
 
 $(eval $(call collection,light,\
 	Minimum package set using only admin mini and the standard theme,\
-	+lighttpd +luci-mod-admin-mini +luci-theme-openwrt @BROKEN))
+	+uhttpd +luci-mod-admin-mini +luci-theme-openwrt @BROKEN))
 
 
 ### Compile ###
